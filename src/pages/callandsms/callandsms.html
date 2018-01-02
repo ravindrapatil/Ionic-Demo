@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-navbar color="myOrange">
+    <ion-buttons left>
+      <button ion-button ion-only menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Call and SMS</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding class="call-sms-list">
+  <p class="note">Slide the items to get the options to make a call and send the SMS</p>
+  <ion-list reorder="true" (ionItemReorder)="reorderItems($event)">
+    <ion-item-sliding *ngFor="let speaker of speakers">
+      <ion-item>
+        <ion-avatar item-start>
+          <img src="https://raw.githubusercontent.com/planetoftheweb/barcamp/master/{{speaker.image}}">
+        </ion-avatar>
+        <p>{{speaker.description}}</p>
+      </ion-item>
+      <ion-item-options side="left">
+        <button ion-button color="primary" (click)="makeAsms()">
+          <ion-icon name="text"></ion-icon>
+          Text
+        </button>
+        <button ion-button color="secondary" (click)="makeAcall()">
+          <ion-icon name="call"></ion-icon>
+          Call
+        </button>
+      </ion-item-options>
+      <ion-item-options side="right">
+        <button ion-button color="primary">
+          <ion-icon name="mail"></ion-icon>
+          Email
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar color="myOrange">
+    <ion-buttons left>
+      <button ion-button ion-only menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>List</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div padding>
+    <h1>List of countries</h1>
+    <p>RESTful web service for getting countries - https://restcountries.eu/rest/v2/all</p>
+  </div>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col col-10>
+        <ion-searchbar (ionInput)="getItems($event)" debounce=700></ion-searchbar>
+      </ion-col>
+      <ion-col col-2>
+        <button ion-button type="button" (click)="sort()">Sort</button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-list padding>
+    <ion-item *ngFor="let country of countries | sorting: {property: column, order: order}">
+      <ion-avatar item-left>
+        <img src="{{country.flag}}" />
+      </ion-avatar>
+      <h2>{{country.name}}</h2>
+      <p>Capital: {{country.capital}}, Region: {{country.region}}</p>
+    </ion-item>
+  </ion-list>
+</ion-content>

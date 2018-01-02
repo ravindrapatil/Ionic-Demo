@@ -1,0 +1,52 @@
+<!--
+  Generated template for the Login page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="myOrange">
+    <ion-title>Login</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding id="welcome">
+  <div showWhen="android">
+    <p style="font-size:10px;">This is a Android Platform</p>
+  </div>
+  <div showWhen="portrait">
+      <p style="font-size:10px;">I am visible on Portrait!</p>
+  </div>
+  <div showWhen="landscape">
+      <p style="font-size:10px;">I am visible on landscape!</p>
+  </div>
+  <h3>Already Account?</h3>
+  <p>Fill up the form to get access to your account</p>
+  <p>Temporary Login: ravindra@gmail.com / testing</p>
+  <p *ngIf="loginFailedMsg" style="color: red">{{errMsg}}</p>
+  <form [formGroup]="login">
+    <ion-list>
+      <ion-item>
+        <ion-label color="primary" floating>Email</ion-label>
+        <ion-input type="email" formControlName="email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label color="primary" floating>Password</ion-label>
+        <ion-input type="password" formControlName="password"></ion-input>
+      </ion-item>
+      <div class="btn">
+        <button ion-button block [disabled]="!login.valid" color="myOrange" (click)="signIn()">Sign In</button>
+      </div>
+      <div class="btn">
+        Don't have an account?
+        <a (click)="register()">
+          <strong>Create one</strong>
+        </a>
+      </div>
+    </ion-list>
+  </form>
+  <div class="error-msg">
+    <p *ngIf="!login.controls.email.valid && login.controls.email.dirty">Enter valid email</p>
+    <p *ngIf="!login.controls.password.valid && login.controls.password.dirty">Password min-length is 5 and max-length is 10</p>
+  </div>
+</ion-content>

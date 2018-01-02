@@ -1,0 +1,171 @@
+<ion-header>
+  <ion-navbar color="myOrange">
+    <ion-title>Components</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <br />
+  <br />
+  <button ion-button block color="myOrange" (click)="presentActionSheet()">Show Action Sheet</button>
+  <br />
+
+  <h2>Cards</h2>
+  <br />
+  <ion-card>
+    <ion-card-header>
+      Card Header
+    </ion-card-header>
+    <ion-card-content>
+      Just like a normal page, cards can be customized to include headers. To add a header to a card
+    </ion-card-content>
+  </ion-card>
+  <br />
+  <br />
+
+  <ion-card>
+    <img src="https://ionicframework.com/dist/preview-app/www/assets/img/nin-live.png" />
+    <ion-card-content>
+      <ion-card-title>Images In Cards</ion-card-title>
+      <p>Images often vary in size, so it is important that they adopt a consistent style throughout your app. Images can easily
+        be added to cards. Adding an image to a card will give the image a constant width, and a variable height.</p>
+    </ion-card-content>
+  </ion-card>
+  <br />
+  <br />
+
+  <ion-card>
+    <ion-item>
+      <ion-avatar item-start>
+        <img src='https://ionicframework.com/dist/preview-app/www/assets/img/marty-avatar.png' />
+      </ion-avatar>
+      <h2>Marty McFly</h2>
+      <p>November 5, 1955</p>
+    </ion-item>
+    <img src="https://ionicframework.com/dist/preview-app/www/assets/img/advance-card-bttf.png" />
+    <ion-card-content>
+      <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?!
+        Whoa. This is heavy.</p>
+    </ion-card-content>
+    <ion-row>
+      <ion-col>
+        <button ion-button icon-left clear small>
+          <ion-icon name="thumbs-up"></ion-icon>
+          <div>12 Likes</div>
+        </button>
+      </ion-col>
+      <ion-col>
+        <button ion-button icon-left clear small>
+          <ion-icon name="text"></ion-icon>
+          <div>4 Comments</div>
+        </button>
+      </ion-col>
+      <ion-col center text-center>
+        <ion-note>
+          11h ago
+        </ion-note>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+  <br />
+
+  <h2>Date Time</h2>
+  <br />
+  <ion-item>
+    <ion-label>Date</ion-label>
+    <ion-datetime displayFormat="MMM DD, YYYY" [(ngModel)]="myDate" (ngModelChange)="getNewDate()"></ion-datetime>
+  </ion-item>
+
+  <ion-fab right bottom>
+    <button ion-fab color="light">
+      <ion-icon name="arrow-dropleft"></ion-icon>
+    </button>
+    <ion-fab-list side="left">
+      <button ion-fab (click)="facebookClick()">
+        <ion-icon name="logo-facebook"></ion-icon>
+      </button>
+      <button ion-fab>
+        <ion-icon name="logo-twitter"></ion-icon>
+      </button>
+      <button ion-fab>
+        <ion-icon name="logo-vimeo"></ion-icon>
+      </button>
+      <button ion-fab>
+        <ion-icon name="logo-googleplus"></ion-icon>
+      </button>
+    </ion-fab-list>
+  </ion-fab>
+
+  <br />
+  <h2>Sliding List</h2>
+  <ion-list>
+    <ion-item-sliding>
+      <ion-item>
+        <ion-avatar item-start>
+          <img src="https://ionicframework.com/dist/preview-app/www/assets/img/venkman.jpg">
+        </ion-avatar>
+        <h2>Sliding items can be swiped to the left or right to reveal a hidden set of buttons.</h2>
+      </ion-item>
+      <ion-item-options side="left">
+        <button ion-button color="primary" (click)="makeAsms()">
+          <ion-icon name="text"></ion-icon>
+          Text
+        </button>
+        <button ion-button color="secondary" (click)="makeAcall()">
+          <ion-icon name="call"></ion-icon>
+          Call
+        </button>
+      </ion-item-options>
+      <ion-item-options side="right">
+        <button ion-button color="primary">
+          <ion-icon name="mail"></ion-icon>
+          Email
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+  <ion-list>
+    <ion-item-sliding>
+      <ion-item>
+        <ion-avatar item-start>
+          <img src="https://ionicframework.com/dist/preview-app/www/assets/img/venkman.jpg">
+        </ion-avatar>
+        <h2>To use a sliding item, add an ion-item-sliding component inside of an ion-list component.</h2>
+      </ion-item>
+      <ion-item-options side="left">
+        <button ion-button color="primary" (click)="makeAsms()">
+          <ion-icon name="text"></ion-icon>
+          Text
+        </button>
+        <button ion-button color="secondary" (click)="makeAcall()">
+          <ion-icon name="call"></ion-icon>
+          Call
+        </button>
+      </ion-item-options>
+      <ion-item-options side="right">
+        <button ion-button color="primary">
+          <ion-icon name="mail"></ion-icon>
+          Email
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+  <ion-list>
+    <ion-item>
+      <ion-thumbnail item-start>
+        <img src="https://ionicframework.com/dist/preview-app/www/assets/img/thumbnail-totoro.png">
+      </ion-thumbnail>
+      <h2>Thumbnail List</h2>
+      <p>To use a thumbnail, add an 'ion-thumbnail' component inside of an item. • 1988</p>
+      <button ion-button clear item-end>View</button>
+    </ion-item>
+  </ion-list>
+
+  <br />
+  <h2>Loading</h2>
+  <br />
+  <button ion-button block color="myOrange" (click)="loadingPopup()">Show Loading</button>
+  <br />
+
+
+</ion-content>

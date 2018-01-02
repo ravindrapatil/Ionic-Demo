@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar color="myOrange">
+    <ion-buttons left>
+      <button ion-button ion-only menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>
+      Instagram
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+    <button ion-button full (click)="takePicture()">Take Picture</button>
+    <br/><br/>
+    <button ion-button full (click)="downloadImageUrls()">Show Images</button>
+    <br/><br/>
+    <ion-grid>
+        <ion-row>
+          <ion-col col-12 col-sm-4 col-md-3 col-lg-2 *ngFor="let image of imageUrls">
+            <img [src]="image" />
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+</ion-content>

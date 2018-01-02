@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-navbar color="myOrange">
+    <ion-buttons left>
+      <button ion-button ion-only menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Camera</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="card-background-page">
+  <div padding>
+    <button ion-button block color="myOrange" (click)="takePhoto()">
+      Take Photo
+    </button>
+    <br />
+    <br />
+    <button ion-button block color="myOrange" (click)="uploadToFirebase()">
+      Upload to Firebase
+    </button>
+  </div>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col col-6 *ngFor="let photo of photos; let id = index">
+        <ion-card class="block">
+          <ion-icon name="trash" class="deleteIcon" (click)="deletePhoto(id)"></ion-icon>
+          <img [src]="photo" *ngIf="photo" imageViewer />
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <br/>
+  <br/>
+
+  <ion-card>
+    <ion-card-content>
+      Latest Picture uploaded to firebase:
+      <img src="{{picurl}}" *ngIf="picurl" />
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

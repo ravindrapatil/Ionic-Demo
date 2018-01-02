@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "198204986187",
+    "firebase_url": "https://mymobileapp-d7cab.firebaseio.com",
+    "project_id": "mymobileapp-d7cab",
+    "storage_bucket": "mymobileapp-d7cab.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:198204986187:android:89ce96813617ebfa",
+        "android_client_info": {
+          "package_name": "com.pwh.push"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "198204986187-u0s6qcatjni6pu2n1brl2c7mimeac7bu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQ45q9y4kcYg6EHhLQGBu-4WnM6-wnQ1M"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

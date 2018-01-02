@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons left>
+      <button ion-button ion-only menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Social Sharing</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-row>
+    <ion-col col-12 col-md-6 *ngFor="let movie of movies | slice: 10 : 17">
+      <ion-card class="speaker-list">
+        <div class="image-holder">
+          <img src="{{movie.cover_url}} || ../assets/imgs/backgrounds-nature.jpg" />
+        </div>
+        <ion-card-content>
+          <ion-card-title>{{movie.title}}</ion-card-title>
+          <p class="description">{{movie.description}}</p>
+          <div class="social-link">
+            <ion-icon class="whatsapp" name="logo-whatsapp" (click)="whatsappShare(movie)"></ion-icon>
+            <ion-icon class="facebook" name="logo-facebook" (click)="facebookShare(movie)"></ion-icon>
+          </div>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+
+
+
+</ion-content>

@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar color="myOrange">
+    <ion-buttons left>
+      <button ion-button ion-only menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Instagram</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div padding>
+  <button ion-button block color="myOrange" (click)="takePhoto()">Take Photo</button>
+</div>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-6 *ngFor="let photo of photos | async">
+        <ion-card class="block">
+          <ion-icon name="heart" class="heartIcon" (click)="likePhoto(photo.$key, photo.likes)">
+            <span>{{photo.likes}}</span>
+          </ion-icon>
+          <ion-icon name="trash" class="deleteIcon" (click)="deletePhoto(photo.$key)"></ion-icon>
+          <img [src]="photo.src" imageViewer />
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

@@ -1,0 +1,15 @@
+page-callandsms {
+    .call-sms-list {
+        .note {
+            color: red;
+        }
+        ion-item {
+            p {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                width: 98%;
+            }
+        }
+    }
+}

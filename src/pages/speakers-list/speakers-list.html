@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar color="myOrange">
+    <ion-buttons left>
+      <button ion-button ion-only menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Speakers</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-6 col-md-4 *ngFor="let speaker of speakersList | slice:0:20">
+        <ion-card class="speaker-list" (click)="gotoSpeakersDetails(speaker)">
+          <div class="image-holder">
+            <img src="https://raw.githubusercontent.com/planetoftheweb/barcamp/master/{{speaker.image}}" />
+          </div>
+          <ion-card-content>
+            <ion-card-title>{{speaker.firstname}} {{speaker.lastname}}</ion-card-title>
+            <p>{{speaker.category}}</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

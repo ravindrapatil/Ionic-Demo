@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar color="myOrange">
+    <ion-buttons left>
+      <button ion-button ion-only menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Reorder List</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list reorder="true" (ionItemReorder)="reorderItems($event)">
+    <ion-item *ngFor="let user of userList">
+      <ion-thumbnail item-start>
+        <img src="https://raw.githubusercontent.com/planetoftheweb/barcamp/master/{{user.image}}">
+      </ion-thumbnail>
+      <h2>{{user.firstname}} {{user.lastname}}</h2>
+      <p class="short-text">{{user.description}}</p>
+      <button ion-button clear item-end (click)="viewMore(user)">View</button>
+    </ion-item>
+  </ion-list>
+  <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>

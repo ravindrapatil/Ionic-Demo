@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar color="myOrange">
+    <ion-buttons left>
+      <button ion-button ion-only menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Image Gallery</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-slides class="image-slides" loop="true" effect="flip">
+    <ion-slide *ngFor="let img of imageGallery">
+      <img src="{{img.image}}" class="thumn-img" imageViewer />
+    </ion-slide>
+  </ion-slides>
+</ion-content>

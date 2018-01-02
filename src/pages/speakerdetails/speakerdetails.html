@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar color="myOrange">
+    <ion-buttons left>
+      <button ion-button ion-only menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Speaker Details</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="speaker-details">
+  <img src="https://raw.githubusercontent.com/planetoftheweb/barcamp/master/{{speaker.image}}" />
+  <h4>{{speaker.firstname}} {{speaker.lastname}}</h4>
+  <p><strong>Category:</strong> {{speaker.category}}</p>
+  <!-- <p><strong>Country:</strong> {{speaker.country}}</p> -->
+  <p><strong>Biography:</strong> {{speaker.bio}}</p>
+  <p><strong>Description:</strong> {{speaker.description}}</p>
+  
+  <div class="social-links">
+      <strong>Social Links:</strong>
+      <a *ngIf="speaker.link" href="{{speaker.link}}" target="_blank"><ion-icon name="browsers"></ion-icon></a>
+      <!-- <a *ngIf="speaker.linkedin" href="{{speaker.linkedin}}" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a>
+      <a *ngIf="speaker.twitter" href="{{speaker.twitter}}" target="_blank"><ion-icon name="logo-twitter"></ion-icon></a> -->
+  </div>
+
+
+</ion-content>

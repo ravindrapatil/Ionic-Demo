@@ -1,0 +1,43 @@
+page-contact {
+    .regular {
+        // padding: 0 !important;
+        // ion-row {
+        //     ion-col {
+        //         padding: 0;
+        //     }
+        //}
+    }
+    .image-container {
+        // background-size: cover;
+        // height: 150px;
+        overflow: hidden
+    }
+    .one-image {
+        margin: 2px;
+        img {
+            margin-top: 10px;
+        }
+    }
+    @media (min-width: 0px) {
+        .images {
+            column-count: 2;
+        }    
+    }
+    @media (min-width: 620px) {
+        .images {
+            column-count: 3;
+        }    
+    }
+    @media (min-width: 820px) {
+        .images {
+            column-count: 4;
+        }    
+    }
+    .segment-md-secondary .segment-button.segment-activated {
+        border-color: #f96332;
+        color: #f96332;
+    }
+    .segment-md-secondary .segment-button {
+        color: #000;
+    }
+}

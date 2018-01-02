@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-navbar color="myOrange">
+    <ion-buttons left>
+      <button ion-button ion-only menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Google Maps Directions</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <!-- <div id="floating-panel"> -->
+  <ion-grid>
+    <ion-row>
+      <ion-col col-6>
+        <ion-select [(ngModel)]="start" id="start" (ngModelChange)="calculateAndDisplayRoute()">
+          <ion-option value="bangaluru">Bangaluru</ion-option>
+          <ion-option value="delhi">Delhi</ion-option>
+          <ion-option value="mumbai">Mumbai</ion-option>
+          <ion-option value="bhopal">Bhopal</ion-option>
+          <ion-option value="jaipur">Jaipur</ion-option>
+          <ion-option value="hyderabad">Hyderabad</ion-option>
+          <ion-option value="lucknow">Lucknow</ion-option>
+        </ion-select>
+      </ion-col>
+      <ion-col col-6>
+        <ion-select [(ngModel)]="end" id="end" (ngModelChange)="calculateAndDisplayRoute()">
+          <ion-option value="bangaluru">Bangaluru</ion-option>
+          <ion-option value="delhi">Delhi</ion-option>
+          <ion-option value="mumbai">Mumbai</ion-option>
+          <ion-option value="bhopal">Bhopal</ion-option>
+          <ion-option value="jaipur">Jaipur</ion-option>
+          <ion-option value="hyderabad">Hyderabad</ion-option>
+          <ion-option value="lucknow">Lucknow</ion-option>
+        </ion-select>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+  <!-- </div> -->
+  <div #map id="map"></div>
+</ion-content>

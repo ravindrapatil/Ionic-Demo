@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons left>
+      <button ion-button ion-only menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>
+      Contact
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-icon name="logo-skype"></ion-icon> ravindra.patil4
+    </ion-item>
+    <ion-item>
+      <ion-icon name="mail"></ion-icon> ravindra.spatil@gmail.com
+    </ion-item>
+  </ion-list>
+
+  <!-- <ion-slides slidesPerView="3" centeredSlides="false" spaceBetween="5"
+     class="comp-slides">
+    <ion-slide *ngFor="let d of datas">
+      <img src="{{d}}" imageViewer />
+    </ion-slide>
+  </ion-slides> -->
+
+  <ion-segment [(ngModel)]="galleryType" color="secondary">
+    <ion-segment-button value="regular">
+      Regular
+    </ion-segment-button>
+    <ion-segment-button value="pinterest">
+      Pinterest
+    </ion-segment-button>
+  </ion-segment>
+
+  <div [ngSwitch]="galleryType">
+    <ion-grid *ngSwitchCase="'regular'" class="regular">
+      <ion-row>
+        <ion-col col-6 col-md-4 col-xl-3 *ngFor="let d of datas | slice: 0 : 10">
+          <div class="image-container"><img src="{{d}}" /></div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <div class="images" *ngSwitchCase="'pinterest'">
+      <div class="one-image" *ngFor="let d of datas | slice: 30 : 50">
+          <img src="{{d}}" />
+      </div>    
+    </div>
+  </div>
+
+
+
+</ion-content>

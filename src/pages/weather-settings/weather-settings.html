@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons left>
+      <button ion-button ion-only menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Weather Settings</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <p>To change the setting, enter the city and state code (eg: city: "Boston", state: "MA")</p>
+  <ion-grid>
+    <ion-row>
+      <ion-col width-100>
+        <ion-list>
+          <form (ngSubmit)="saveForm()">
+            <ion-item>
+              <ion-label fixed>City</ion-label>
+              <ion-input [(ngModel)]="city" name="city" type="text"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label fixed>Country</ion-label>
+                <ion-input [(ngModel)]="state" name="state" type="text"></ion-input>
+              </ion-item>
+              <br/><br/>
+              <button ion-button type="submit" block>Save Changes</button>
+          </form>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <br/><br/>
+  <p>Eg: [Delhi, INDIA], [San Francisco, CA], [Chicago, IL], [Boston, MA], [Houston, TX], [London, UK], [New York, NY]</p>
+</ion-content>

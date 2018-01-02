@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons left>
+      <button ion-button ion-only menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-buttons end class="fmr-btns">
+      <button ion-button icon-only (click)="filterData()">
+        <ion-icon name="funnel"></ion-icon>
+      </button>
+      <button ion-button icon-only (click)="mapData()">
+        <ion-icon name="build"></ion-icon>
+      </button>
+      <button ion-button icon-only (click)="reduceData()">
+        <ion-icon name="calculator"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Filter, Map, Reduce</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <button ion-button (click)="resetData()">Reset</button>
+  <br/>
+  <br/>
+  <ion-list>
+    <ion-item *ngFor="let item of modifiedData">
+      <ion-avatar item-left>
+        <img [src]=item.avatar />
+      </ion-avatar>
+      <h2>{{item.name}}</h2>
+      <p>{{item.subscribers}}</p>
+    </ion-item>
+  </ion-list>
+  <div *ngIf="resultHolder">
+    <p *ngIf="sum">Total subscribers: {{sum}}</p>
+    <p *ngIf="maxSubs">Max number of subscribers: {{maxSubs}}</p>
+  </div>
+
+
+</ion-content>

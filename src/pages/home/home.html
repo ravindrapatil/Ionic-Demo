@@ -1,0 +1,101 @@
+<ion-header>
+  <ion-navbar color="myOrange">
+    <ion-buttons left>
+      <button ion-button ion-only menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <p>Welcome {{username}}</p>
+  <h6>Components</h6>
+  <ion-slides slidesPerView="4" centeredSlides="false" class="comp-slides">
+    <ion-slide (click)="gotoComponents()">
+      <ion-icon name="baseball"></ion-icon>
+      <h1>Actions</h1>
+    </ion-slide>
+    <ion-slide (click)="gotoComponents()">
+      <ion-icon name="card"></ion-icon>
+      <h1>Cards</h1>
+    </ion-slide>
+    <ion-slide (click)="gotoComponents()">
+      <ion-icon name="calendar"></ion-icon>
+      <h1>Date Time</h1>
+    </ion-slide>
+    <ion-slide (click)="gotoComponents()">
+      <ion-icon name="boat"></ion-icon>
+      <h1>FABs </h1>
+    </ion-slide>
+    <ion-slide (click)="gotoComponents()">
+      <ion-icon name="list-box"></ion-icon>
+      <h1>Sliding List</h1>
+    </ion-slide>
+    <ion-slide (click)="gotoComponents()">
+      <ion-icon name="aperture"></ion-icon>
+      <h1>Loading</h1>
+    </ion-slide>
+  </ion-slides>
+
+  <hr />
+
+  <h6>Features</h6>
+  <ion-slides slidesPerView="3" centeredSlides="false" spaceBetween="20" class="comp-slides">
+    <ion-slide (click)="gotoGoogleMaps()" class="white-bg-slide">
+      <ion-icon name="map"></ion-icon>
+      <h1>Maps Directions</h1>
+    </ion-slide>
+    <ion-slide (click)="gotoInstagramNew()" class="white-bg-slide">
+      <ion-icon name="logo-instagram"></ion-icon>
+      <h1>Instagram Like</h1>
+    </ion-slide>
+    <ion-slide (click)="gotospeakersPage()" class="white-bg-slide">
+      <ion-icon name="mic"></ion-icon>
+      <h1>Event Speakers</h1>
+    </ion-slide>
+    <ion-slide (click)="gotoreorderPage()" class="white-bg-slide">
+      <ion-icon name="reorder"></ion-icon>
+      <h1>Reorder List</h1>
+    </ion-slide>
+    <ion-slide (click)="gotoGallery()" class="white-bg-slide">
+      <ion-icon name="albums"></ion-icon>
+      <h1>Image Gallery</h1>
+    </ion-slide>
+    <ion-slide (click)="gotoCallAndSms()" class="white-bg-slide">
+      <ion-icon name="call"></ion-icon>
+      <h1>Call and SMS</h1>
+    </ion-slide>
+    <ion-slide (click)="gotoCameraPage()" class="white-bg-slide">
+      <ion-icon name="camera"></ion-icon>
+      <h1>Upload to Firestore</h1>
+    </ion-slide>
+    <!-- <ion-slide (click)="gotoInstagram()" class="white-bg-slide">
+      <ion-icon name="logo-instagram"></ion-icon>
+      <h1>Instagram Like App</h1>
+    </ion-slide> -->
+  </ion-slides>
+
+  <br />
+  <br />
+
+  <ion-slides slidesPerView="3" centeredSlides="false" spaceBetween="20" class="comp-slides">
+    <ion-slide (click)="gotoWeatherApp()" class="white-bg-slide">
+      <ion-icon name="rainy"></ion-icon>
+      <h1>Weather App</h1>
+    </ion-slide>
+    <ion-slide (click)="gotoSocialSharing()" class="white-bg-slide">
+      <ion-icon name="logo-whatsapp"></ion-icon>
+      <h1>Social Sharing</h1>
+    </ion-slide>
+    <ion-slide (click)="gotopushNotificon()" class="white-bg-slide">
+      <ion-icon name="notifications"></ion-icon>
+      <h1>Push Notification</h1>
+    </ion-slide>
+    <ion-slide (click)="gotoFMR()" class="white-bg-slide">
+      <ion-icon name="color-filter"></ion-icon>
+      <h1>Filter, Map, Reduce</h1>
+    </ion-slide>
+  </ion-slides>
+</ion-content>

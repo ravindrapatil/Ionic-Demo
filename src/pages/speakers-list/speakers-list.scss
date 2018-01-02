@@ -1,0 +1,31 @@
+page-speakers-list {
+    .speaker-list {
+        height: 200px;
+        ion-card-content {
+            padding-top: 0;
+        }
+        .image-holder {
+            overflow: hidden;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            margin: 20px auto 0;
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+        ion-card-title {
+            font-size: 1.5rem;
+            margin: 0;
+            text-align: center;
+        }
+        p {
+            // white-space: nowrap;
+            // overflow: hidden;
+            // text-overflow: ellipsis;
+            // width: 80%;
+            text-align: center;
+        }
+    }
+}

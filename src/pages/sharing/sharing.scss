@@ -1,0 +1,66 @@
+$font-size: 13px;
+$line-height: 1.4;
+$lines-to-show: 3;
+
+page-sharing {
+    .speaker-list {
+        height: 260px;
+        ion-card-content {
+            padding-top: 0;
+        }
+        .image-holder {
+            overflow: hidden;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            margin: 20px auto 0;
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+        ion-card-title {
+            // font-size: 1.6rem;
+            margin: 0;
+            text-align: center;
+            display: block; /* Fallback for non-webkit */
+            display: -webkit-box;
+            max-width: 100%;
+            height: 16px*1.8*1; /* Fallback for non-webkit */
+            margin: 0 auto 5px;
+            font-size: 16px;
+            line-height: 1.8;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        p.description {
+            display: block; /* Fallback for non-webkit */
+            display: -webkit-box;
+            max-width: 100%;
+            height: $font-size*$line-height*$lines-to-show; /* Fallback for non-webkit */
+            margin: 0 auto;
+            font-size: $font-size;
+            line-height: $line-height;
+            -webkit-line-clamp: $lines-to-show;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+    .social-link {
+        overflow: hidden;
+        margin: 10px 0;
+        ion-icon {
+            font-size: 30px;
+            cursor: pointer;
+        }
+        .whatsapp {
+            float: left;
+        }
+        .facebook{
+            float: right;
+        }
+    }
+}
